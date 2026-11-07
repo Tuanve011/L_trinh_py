@@ -1,7 +1,6 @@
 # Câu 4 - Đề 1
 from datetime import datetime
 
-# a. Nhập thông tin sách, lưu vào từ điển
 n = int(input("Nhập số lượng sách (n>0): "))
 while n <= 0:
     n = int(input("Nhập số lượng sách (n>0): "))
@@ -19,7 +18,6 @@ for i in range(n):
     tudien[MaSoSach] = [TenSach, TenTacGia, NhaXuatBan, NamXuatBan]
 print(tudien)
 
-# b. Xóa sách theo mã số
 x = input("Nhập mã số sách cần xóa: ")
 if x in tudien:
     del tudien[x]

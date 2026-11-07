@@ -1,6 +1,4 @@
 # Câu 3 - Đề 1
-
-# a. Nhập danh sách, dừng khi nhập 0
 danhsach = []
 while True:
     x = int(input("Nhập danh sách: "))
@@ -9,7 +7,6 @@ while True:
     danhsach.append(x)
 print("Danh sách vừa nhập:", danhsach)
 
-# b. Tổng các số dương chẵn
 tong = 0
 for i in danhsach:
     if i > 0 and i % 2 == 0:
@@ -19,7 +16,6 @@ if tong != 0:
 else:
     print("Không có số dương chẵn trong danh sách.")
 
-# c. Đếm số lần xuất hiện của k
 k = int(input("Nhập k: "))
 dem = 0
 for i in danhsach:
