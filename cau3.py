@@ -1,28 +1,31 @@
-# Câu 3 - Đề 2
+# Câu 3 - Đề 1
 
 # a. Nhập danh sách, dừng khi nhập 0
-ds = []
+danhsach = []
 while True:
     x = int(input("Nhập danh sách: "))
     if x == 0:
         break
-    ds.append(x)
-print("Danh sách vừa nhập:", ds)
+    danhsach.append(x)
+print("Danh sách vừa nhập:", danhsach)
 
-# b. In các số dương chẵn
-DuongChan = []
-for i in ds:
+# b. Tổng các số dương chẵn
+tong = 0
+for i in danhsach:
     if i > 0 and i % 2 == 0:
-        DuongChan.append(i)
-if DuongChan:
-    print("Các số dương chẵn có trong danh sách:", DuongChan)
+        tong += i
+if tong != 0:
+    print("Tổng các số dương chẵn trong danh sách:", tong)
 else:
     print("Không có số dương chẵn trong danh sách.")
 
 # c. Đếm số lần xuất hiện của k
 k = int(input("Nhập k: "))
-dem = ds.count(k)
+dem = 0
+for i in danhsach:
+    if i == k:
+        dem += 1
 if dem == 0:
-    print(f"{k} không có trong danh sách")
+    print("Không có phần tử", k, "trong danh sách")
 else:
-    print(f"{k} xuất hiện {dem} lần")
+    print("Số lần xuất hiện của", k, "là:", dem)

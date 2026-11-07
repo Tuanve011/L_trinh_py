@@ -1,22 +1,29 @@
-# Câu 4 - Đề 2
+# Câu 4 - Đề 1
+from datetime import datetime
 
-# a. Nhập thông tin máy tính, lưu vào từ điển
-n = int(input("Nhập số lượng máy tính: "))
+# a. Nhập thông tin sách, lưu vào từ điển
+n = int(input("Nhập số lượng sách (n>0): "))
+while n <= 0:
+    n = int(input("Nhập số lượng sách (n>0): "))
+
 tudien = {}
+namhientai = datetime.now().year
 for i in range(n):
-    SoHieu = input("Nhập số hiệu máy tính: ")
-    BoNho = int(input("Nhập dung lượng bộ nhớ: "))
-    OCung = int(input("Nhập dung lượng ổ cứng: "))
-    HangSanXuat = input("Nhập hãng sản xuất: ")
-    NamSanXuat = int(input("Nhập năm sản xuất: "))
-    tudien[SoHieu] = [BoNho, OCung, HangSanXuat, NamSanXuat]
+    MaSoSach = input("Nhập mã số sách: ")
+    TenSach = input("Nhập tên sách: ")
+    TenTacGia = input("Nhập tên tác giả: ")
+    NhaXuatBan = input("Nhập nhà xuất bản: ")
+    NamXuatBan = int(input("Nhập năm xuất bản: "))
+    while NamXuatBan > namhientai:
+        NamXuatBan = int(input(f"Năm xuất bản không hợp lệ, vui lòng nhập năm <= {namhientai}: "))
+    tudien[MaSoSach] = [TenSach, TenTacGia, NhaXuatBan, NamXuatBan]
 print(tudien)
 
-# b. Xóa máy tính theo số hiệu
-x = input("Nhập số hiệu máy tính cần tìm: ")
+# b. Xóa sách theo mã số
+x = input("Nhập mã số sách cần xóa: ")
 if x in tudien:
     del tudien[x]
-    print(f"Máy tính có số hiệu {x} đã được xóa.")
+    print(f"Cuốn sách có mã số {x} đã được xóa.")
 else:
-    print("Không có máy tính cần xóa.")
+    print("Không tìm thấy cuốn sách cần xóa.")
 print(tudien)

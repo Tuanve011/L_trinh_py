@@ -1,21 +1,23 @@
-# Câu 5 - Đề 2
+# Câu 5 - Đề 1
 
 
-class MonHoc:
-    def __init__(self, MaMonHoc, TenMonHoc, SoTinChi, KhoaPhuTrach):
-        self.MaMonHoc = MaMonHoc
-        self.TenMonHoc = TenMonHoc
-        self.SoTinChi = SoTinChi
-        self.KhoaPhuTrach = KhoaPhuTrach
+class DienThoai:
+    def __init__(self, MaMay, TenMay, HangSanXuat, DungLuongPin, GiaBan):
+        self.MaMay = MaMay
+        self.TenMay = TenMay
+        self.HangSanXuat = HangSanXuat
+        self.DungLuongPin = DungLuongPin
+        self.GiaBan = GiaBan
 
-    def thongtinmonhoc(self):
-        print("Mã môn học:", self.MaMonHoc)
-        print("Tên môn học:", self.TenMonHoc)
-        print("Số tín chỉ:", self.SoTinChi)
-        print("Khoa phụ trách:", self.KhoaPhuTrach)
+    def thongtindienthoai(self):
+        print("Mã máy:", self.MaMay)
+        print("Tên máy:", self.TenMay)
+        print("Hãng sản xuất:", self.HangSanXuat)
+        print("Dung lượng pin:", self.DungLuongPin)
+        print("Giá bán:", self.GiaBan)
 
 
-CSDL = MonHoc(229008, "Cơ sở dữ liệu", 3, "Công nghệ thông tin")
-TA1 = MonHoc(224604, "Tiếng Anh 1", 2, "Ngoại ngữ")
-CSDL.thongtinmonhoc()
-TA1.thongtinmonhoc()
+DT1 = DienThoai("DT01", "iPhone 15 Pro", "Apple", 3274, 28990000)
+DT2 = DienThoai("DT02", "Galaxy S24 Ultra", "Samsung", 5000, 29990000)
+DT1.thongtindienthoai()
+DT2.thongtindienthoai()

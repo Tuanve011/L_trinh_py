@@ -1,15 +1,16 @@
-# Câu 2 - Đề 2
+# Câu 2 - Đề 1
 s = input("Nhập chuỗi s: ")
 
-# a. Đếm số ký tự chữ thường
+
+# a. Đếm số ký tự chữ hoa
 dem = 0
 for i in s:
-    if i.islower():
+    if i.isupper():
         dem += 1
 if dem == 0:
-    print("Chuỗi không có ký tự chữ thường.")
+    print("Chuỗi không có ký tự chữ hoa.")
 else:
-    print("Số ký tự chữ thường trong chuỗi:", dem)
+    print("Số ký tự chữ hoa:", dem)
 
 
 # b. Kiểm tra chuỗi đối xứng
@@ -22,6 +23,9 @@ def DoiXung(s):
 
 DoiXung(s)
 
-# c. Đổi ký tự đầu tiên của mỗi từ thành chữ hoa
-s = s.title()
-print("Chuỗi sau khi chuyển ký tự đầu tiên của mỗi từ thành chữ hoa:", s)
+# c. Tính tổng các chữ số trong chuỗi
+tong = 0
+for i in s:
+    if i.isdigit():
+        tong += int(i)
+print("Tổng các chữ số trong chuỗi:", tong)
